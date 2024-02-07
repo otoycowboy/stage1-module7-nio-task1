@@ -1,6 +1,7 @@
 package com.epam.mjc.nio;
 
 import java.io.*;
+import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
@@ -30,7 +31,7 @@ public class FileReader {
         return profile;
     }
 
-    private String getClearInfo(ByteBuffer readBuffer) throws IOException {
+    private String getClearInfo(ByteBuffer readBuffer) throws BufferUnderflowException {
         StringBuilder info = new StringBuilder();
         int c;
         while ((c = readBuffer.get()) != '\n') {
