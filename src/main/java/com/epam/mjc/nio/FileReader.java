@@ -1,7 +1,6 @@
 package com.epam.mjc.nio;
 
 import java.io.*;
-import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
