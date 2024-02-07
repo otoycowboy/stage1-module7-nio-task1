@@ -31,7 +31,7 @@ public class FileReader {
         return profile;
     }
 
-    private String getClearInfo(ByteBuffer readBuffer) throws BufferUnderflowException {
+    private String getClearInfo(ByteBuffer readBuffer) {
         StringBuilder info = new StringBuilder();
         int c;
         while ((c = readBuffer.get()) != '\n') {
